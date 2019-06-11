@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
 
 
+def log(*args):
+    print(*args)
+
+
 def string_element(s):
     r = '"'
     ec = False
@@ -187,11 +191,11 @@ def t_tree():
     }
 '''
     # s1 = '''{"employees": [{ "firstName":-12.34 , "lastName":null }]}'''
-    print('字符串：', s1)
-    print('>>>')
-    print(tokenizer(s1))
-    print('>>>')
-    print('结果：', tree(s1))
+    log('字符串：', s1)
+    log('>>>')
+    log(tokenizer(s1))
+    log('>>>')
+    log('结果：', tree(s1))
 
     s2 = '''
     {
@@ -210,12 +214,12 @@ def t_tree():
         "sex_is_male": true
     }
     '''
-    print('\n\n')
-    print('字符串：', s2)
-    print('>>>')
-    print(tokenizer(s2))
-    print('>>>')
-    print('结果：', tree(s2))
+    log('\n\n')
+    log('字符串：', s2)
+    log('>>>')
+    log(tokenizer(s2))
+    log('>>>')
+    log('结果：', tree(s2))
 
 
 def t():
